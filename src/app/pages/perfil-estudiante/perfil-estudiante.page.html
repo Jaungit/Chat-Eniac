@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PERFIL ESTUDIANTE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="overlay">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">PERFIL ESTUDIANTE</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    
+    <div class="form-container">
+      <form [formGroup]="formPerfilEstu" class="ion-padding">
+        <ion-list>
+          <ion-item>
+            <ion-input 
+              formControlName="idUcv"
+              label="Cod. Estudiante"
+              labelPlacement="floating"
+              placeholder="Cod. Estudiante"
+              readonly>
+            </ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-input 
+              formControlName="usuario"
+              label="Usuario"
+              labelPlacement="floating"
+              readonly>
+            </ion-input>
+          </ion-item>
+    
+          <ion-button  (click)="nuevaContra()">Cambiar contraseña</ion-button>
+          <ion-button (click)="SesionOff()">Cerrar Sesión</ion-button>
+        </ion-list>
+      </form>
+    </div>
+  </div>
+</ion-content>
